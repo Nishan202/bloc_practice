@@ -2,18 +2,18 @@ import 'package:bloc_practice/note_model.dart';
 
 abstract class ListEventBloc {}
 
-class AddNote extends ListEventBloc {
+class AddNoteEvent extends ListEventBloc {
   NoteModel newNote;
-  AddNote({required this.newNote});
+  AddNoteEvent({required this.newNote});
 }
 
-class UpdateNote extends ListEventBloc {
+class UpdateNoteEvent extends ListEventBloc {
   NoteModel updateNote;
   int index;
-  UpdateNote({required this.index, required this.updateNote});
+  UpdateNoteEvent({required this.index, required this.updateNote});
 }
 
-class DeleteNote extends ListEventBloc {
+class DeleteNoteEvent extends ListEventBloc {
   int index;
-  DeleteNote({required this.index});
+  DeleteNoteEvent({required this.index});
 }
